@@ -13,7 +13,7 @@
     </div>
     <div class="row">
       <div class="col-md-6">
-        <h4>Filtered by: {{listFilter}}</h4>
+        <h4 *ngIf="listFilter.length > 0">Filtered by: {{listFilter}}</h4>
       </div>
     </div>
 
@@ -34,7 +34,7 @@
         </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let product of products">
+          <tr *ngFor="let product of filteredProducts">
             <td>
               <img *ngIf="showImage"
                    [src]="product.imageUrl"
