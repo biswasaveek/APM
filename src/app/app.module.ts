@@ -7,6 +7,8 @@ import {FormsModule} from '@angular/forms';
 import {ConvertToSpacesPipe} from './shared/convert-to-spaces.pipe';
 import {StarComponent} from './shared/star.component';
 import { RatingMsgComponent } from './shared/rating-msg/rating-msg.component';
+import {ProductService} from './products/product.service';
+import {HttpClientModule} from '@angular/common/http';
 
 
 @NgModule({
@@ -19,8 +21,10 @@ import { RatingMsgComponent } from './shared/rating-msg/rating-msg.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
+  providers: [ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
