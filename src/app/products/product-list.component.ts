@@ -12,6 +12,9 @@ export class ProductListComponent implements OnInit {
   imageMargin: number = 2;
   showImage: boolean = true;
 
+  hideRating: boolean = true;
+  ratingMsg: string;
+
   _listFilter: string;
   get listFilter(): string {
     return this._listFilter;
@@ -95,7 +98,9 @@ export class ProductListComponent implements OnInit {
   }
 
   onRatingClicked(message: string): void {
-    this.pageTitle = 'Product List: ' + message;
+    // this.pageTitle = 'Product List: ' + message;
+    this.hideRating = !this.hideRating;
+    this.ratingMsg = message;
   }
 
 }

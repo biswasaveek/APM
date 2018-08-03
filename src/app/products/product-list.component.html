@@ -4,6 +4,10 @@
   <div class="card-header">
     {{pageTitle}}
   </div>
+  <div class="card-header" *ngIf="hideRating == false">
+    <pm-rating-msg></pm-rating-msg>
+    {{ratingMsg}}
+  </div>
   <div class="card-body">
     <div class="row">
       <div class="col-md-2">Filter by:</div>
